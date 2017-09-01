@@ -1,0 +1,17 @@
+{
+    "name": "rubricate/widget",
+    "authors": [
+        {
+            "name"  : "Estefanio NS",
+            "email" : "estefanions@gmail.com"
+        }
+    ],
+    "require": {
+        "rubricate/element": "^0.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Rubricate\\Widget\\": "Rubricate/Widget/"
+        }
+    }
+}
