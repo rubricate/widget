@@ -13,7 +13,7 @@ namespace Rubricate\Widget;
 use Rubricate\Element\CreateElement;
 use Rubricate\Element\IGetElement;
 
-class JsFileArrWidget implements IGetElement 
+class JsFileArrWidget implements IGetElement
 {
     private $e = array();
     
@@ -40,8 +40,8 @@ class JsFileArrWidget implements IGetElement
     {
         foreach ($file as $f)
         {
-           $element   = new JsFileWidget($f);
-           $this->e[] = $element->getElement();
+            $element   = new JsFileWidget($f);
+            $this->e[] = $element->getElement();
         }
     } 
     

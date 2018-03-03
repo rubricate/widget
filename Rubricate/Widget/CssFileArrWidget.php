@@ -40,7 +40,7 @@ class CssFileArrWidget implements IGetElement
     {
         foreach ($file as $f)
         {
-            $element    = new CssFileWidget($f) ;
+            $element    = new CssFileWidget($f);
             $this->e[]  = $element->getElement();
         }
         

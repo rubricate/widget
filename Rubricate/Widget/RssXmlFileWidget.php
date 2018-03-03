@@ -24,7 +24,7 @@ class RssXmlFileWidget implements IGetElement
         $this->e->setAttribute('type', 'application/rss+xml');
 
         if($title) {
-        $this->e->setAttribute('title', $title);
+            $this->e->setAttribute('title', $title);
         }
 
         $this->e->setAttribute('href', $file);

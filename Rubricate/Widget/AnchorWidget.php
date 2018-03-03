@@ -29,15 +29,15 @@ class AnchorWidget implements IGetElement
 
 
 
-    public function setAttribute($name, $value = NULL) 
+    public function setAttribute($name, $value = null) 
     { 
-        if($name == 'href')
-        {
-            throw new \Exception(''
+        if($name == 'href') {
+            throw new \Exception(
+                ''
                 .'setting Attribute other than: '
                 .'href'
                 . PHP_EOL 
-                );
+            );
         }
 
         $this->e->setAttribute($name, $value);

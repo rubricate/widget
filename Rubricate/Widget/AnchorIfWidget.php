@@ -12,7 +12,7 @@ namespace Rubricate\Widget;
 
 use Rubricate\Element\IGetElement;
 
-class AnchorIfWidget implements IGetElement 
+class AnchorIfWidget implements IGetElement
 {
     private $if;
     private $e;
@@ -29,7 +29,7 @@ class AnchorIfWidget implements IGetElement
 
 
 
-    public function setAttribute($name, $value = NULL) 
+    public function setAttribute($name, $value = null) 
     { 
         $this->e->setAttribute($name, $value);
         return $this;
@@ -44,7 +44,7 @@ class AnchorIfWidget implements IGetElement
 
     public function getElement()
     {
-        return (!$this->if)? NULL: $this->e->getElement();
+        return (!$this->if)? null: $this->e->getElement();
     } 
 
 

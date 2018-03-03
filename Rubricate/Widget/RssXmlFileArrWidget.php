@@ -40,7 +40,7 @@ class RssXmlFileArrWidget implements IGetElement
     {
         foreach ($file as $f)
         {
-            $element    = new RssXmlFileWidget($f) ;
+            $element    = new RssXmlFileWidget($f);
             $this->e[]  = $element->getElement();
         }
         

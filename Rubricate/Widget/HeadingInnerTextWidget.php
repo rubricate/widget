@@ -28,7 +28,7 @@ class HeadingInnerTextWidget implements IGetElement
 
 
 
-    public function setAttribute($name, $value = NULL) 
+    public function setAttribute($name, $value = null) 
     { 
         $this->e->setAttribute($name, $value);
         return $this;

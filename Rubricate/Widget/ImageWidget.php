@@ -13,7 +13,7 @@ namespace Rubricate\Widget;
 use Rubricate\Element\CreateElement;
 use Rubricate\Element\IGetElement;
 
-class ImageWidget implements IGetElement 
+class ImageWidget implements IGetElement
 {
     private $e;
     private $file;
@@ -31,15 +31,15 @@ class ImageWidget implements IGetElement
 
 
 
-    public function setAttribute($name, $value = NULL) 
+    public function setAttribute($name, $value = null) 
     { 
-        if(in_array($name, array('src', 'alt')))
-        {
-            throw new \Exception(''
+        if(in_array($name, array('src', 'alt'))) {
+            throw new \Exception(
+                ''
                 .'setting Attribute other than: '
                 .'src and alt'
                 . PHP_EOL 
-                );
+            );
         }
 
         $this->e->setAttribute($name, $value);

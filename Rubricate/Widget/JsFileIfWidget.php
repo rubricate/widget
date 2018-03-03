@@ -12,7 +12,7 @@ namespace Rubricate\Widget;
 
 use Rubricate\Element\IGetElement;
 
-class JsFileIfWidget implements IGetElement 
+class JsFileIfWidget implements IGetElement
 {
 
     private $if;
@@ -28,7 +28,7 @@ class JsFileIfWidget implements IGetElement
 
     public function getElement()
     {
-        return (!$this->if)? NULL: $this->e->getElement();
+        return (!$this->if)? null: $this->e->getElement();
     } 
 
 
