@@ -16,16 +16,15 @@ use Rubricate\Element\IGetElement;
 class AnchorWidget implements IGetElement
 {
     private $e;
-    
+
+
+
     public function __construct($href, $inner)
     {
         $this->e = new CreateElement('a');
         $this->e->setAttribute('href', $href);
         $this->e->addInnerText($inner);
     }
-
-
-
 
 
 
@@ -46,16 +45,10 @@ class AnchorWidget implements IGetElement
 
 
 
-
-
-
     public function getElement()
     {
         return $this->e->getElement();
     } 
-    
-
-
 
     
     

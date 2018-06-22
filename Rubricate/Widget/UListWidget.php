@@ -19,15 +19,10 @@ class UListWidget implements IGetElement
 
 
 
-
-
     public function __construct(array $listArr) 
     {
         $this->e = new RootChildWidget('ul', 'li', $listArr);
     }
-
-
-
 
 
 
@@ -38,18 +33,11 @@ class UListWidget implements IGetElement
 
 
 
-
-
-
     public function getElement()
     {
         return $this->e->getElement();
     } 
-
-
-
     
-
 
 
 }

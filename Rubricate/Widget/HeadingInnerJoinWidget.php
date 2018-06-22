@@ -15,16 +15,16 @@ use Rubricate\Element\IGetElement;
 
 class HeadingInnerJoinWidget implements IGetElement
 {
+
     private $e;
+
     
+
     public function __construct(IGetElement $element, $level = 1)
     {
         $this->e = new CreateElement('h' . $level);
         $this->e->addInnerJoin($element);
     }
-
-
-
 
 
 
@@ -36,18 +36,12 @@ class HeadingInnerJoinWidget implements IGetElement
 
 
 
-
-
-
     public function getElement()
     {
         return $this->e->getElement();
     } 
     
 
-
-
-    
     
 }
 

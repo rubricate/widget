@@ -14,7 +14,8 @@ use Rubricate\Element\IGetElement;
 
 class RssXmlFileArrWidget implements IGetElement
 {
-    private $e    = array();
+
+    private $e = array();
 
 
 
@@ -25,8 +26,6 @@ class RssXmlFileArrWidget implements IGetElement
 
 
 
-
-
     public function getElement()
     {
         return implode('', $this->e);
@@ -34,12 +33,9 @@ class RssXmlFileArrWidget implements IGetElement
 
 
 
-
-
     private function init(array $file)
     {
-        foreach ($file as $f)
-        {
+        foreach ($file as $f) {
             $element    = new RssXmlFileWidget($f);
             $this->e[]  = $element->getElement();
         }
@@ -48,8 +44,5 @@ class RssXmlFileArrWidget implements IGetElement
     
 
 
-
-
 }
-
 

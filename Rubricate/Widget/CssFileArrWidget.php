@@ -14,7 +14,8 @@ use Rubricate\Element\IGetElement;
 
 class CssFileArrWidget implements IGetElement
 {
-    private $e    = array();
+
+    private $e = array();
 
 
 
@@ -25,8 +26,6 @@ class CssFileArrWidget implements IGetElement
 
 
 
-
-
     public function getElement()
     {
         return implode('', $this->e);
@@ -34,22 +33,16 @@ class CssFileArrWidget implements IGetElement
 
 
 
-
-
     private function init(array $file)
     {
-        foreach ($file as $f)
-        {
+        foreach ($file as $f) {
+
             $element    = new CssFileWidget($f);
             $this->e[]  = $element->getElement();
         }
-        
     } 
-    
-
 
 
 
 }
-
 

@@ -20,15 +20,11 @@ class RootChildWidget implements IGetElement
 
 
 
-
     public function __construct($rootTagName, $childTagName, array $contentArr) 
     {
         $this->e = new CreateElement($rootTagName);
         self::init($childTagName, $contentArr);
     }
-
-
-
 
 
 
@@ -39,9 +35,6 @@ class RootChildWidget implements IGetElement
 
 
 
-
-
-
     public function getElement()
     {
         return $this->e->getElement();
@@ -49,13 +42,10 @@ class RootChildWidget implements IGetElement
 
 
 
-
-
-
     private function init($childTagName, $contentArr)
     {
-        foreach ($contentArr as $content)
-        {
+        foreach ($contentArr as $content) {
+
             $child = new CreateElement($childTagName);
             $child->addInnerText($content);
 
@@ -63,9 +53,7 @@ class RootChildWidget implements IGetElement
         }
 
         return $this;
-          
     } 
-    
 
 
 

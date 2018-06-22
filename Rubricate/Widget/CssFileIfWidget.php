@@ -26,12 +26,14 @@ class CssFileIfWidget implements IGetElement
         $this->e  = new CssFileWidget($file);
     }
 
+
+
     public function getElement()
     {
         return (!$this->if)? null: $this->e->getElement();
     } 
 
 
-}
 
+}
 

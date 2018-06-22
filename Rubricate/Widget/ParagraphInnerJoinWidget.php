@@ -15,16 +15,16 @@ use Rubricate\Element\IGetElement;
 
 class ParagraphInnerJoinWidget implements IGetElement
 {
+
     private $e;
+
     
+
     public function __construct(IGetElement $element)
     {
         $this->e = new CreateElement('p');
         $this->e->addInnerJoin($element);
     }
-
-
-
 
 
 
@@ -36,16 +36,10 @@ class ParagraphInnerJoinWidget implements IGetElement
 
 
 
-
-
-
     public function getElement()
     {
         return $this->e->getElement();
     } 
-    
-
-
 
     
     

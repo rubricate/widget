@@ -15,16 +15,16 @@ use Rubricate\Element\IGetElement;
 
 class DivInnerJoinWidget implements IGetElement
 {
+
     private $e;
+
     
+
     public function __construct(IGetElement $element)
     {
         $this->e = new CreateElement('div');
         $this->e->addInnerJoin($element);
     }
-
-
-
 
 
 
@@ -36,16 +36,10 @@ class DivInnerJoinWidget implements IGetElement
 
 
 
-
-
-
     public function getElement()
     {
         return $this->e->getElement();
     } 
-    
-
-
 
     
     

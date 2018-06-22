@@ -15,9 +15,11 @@ use Rubricate\Element\IGetElement;
 
 class ImageWidget implements IGetElement
 {
+
     private $e;
     private $file;
     
+
 
     public function __construct(string $file, string $alt = '')
     {
@@ -28,14 +30,10 @@ class ImageWidget implements IGetElement
 
 
 
-
-
-
     public function setAttribute($name, $value = null) 
     { 
         if(in_array($name, array('src', 'alt'))) {
-            throw new \Exception(
-                ''
+            throw new \Exception( ''
                 .'setting Attribute other than: '
                 .'src and alt'
                 . PHP_EOL 
@@ -48,12 +46,6 @@ class ImageWidget implements IGetElement
 
 
 
-
-
-
-
-
-
     public function getElement()
     {
         return $this->e->getElement();
@@ -61,10 +53,5 @@ class ImageWidget implements IGetElement
 
 
 
-
-
-
-
 }
-
 

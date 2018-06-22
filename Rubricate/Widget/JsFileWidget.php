@@ -15,7 +15,9 @@ use Rubricate\Element\IGetElement;
 
 class JsFileWidget implements IGetElement
 {
+
     private $e;
+
 
 
     public function __construct($file)
@@ -28,16 +30,10 @@ class JsFileWidget implements IGetElement
 
 
 
-
-
-
     public function getElement()
     {
         return $this->e->getElement();
     } 
-
-
-
 
 
 

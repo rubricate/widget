@@ -15,16 +15,16 @@ use Rubricate\Element\IGetElement;
 
 class DivInnerTextWidget implements IGetElement
 {
+
     private $e;
+
     
+
     public function __construct($text)
     {
         $this->e = new CreateElement('div');
         $this->e->addInnerText($text);
     }
-
-
-
 
 
 
@@ -36,18 +36,12 @@ class DivInnerTextWidget implements IGetElement
 
 
 
-
-
-
     public function getElement()
     {
         return $this->e->getElement();
     } 
     
 
-
-
-    
     
 }
 

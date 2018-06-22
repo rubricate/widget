@@ -15,16 +15,16 @@ use Rubricate\Element\IGetElement;
 
 class HeadingInnerTextWidget implements IGetElement
 {
+
     private $e;
+
     
+
     public function __construct($text, $level = 1)
     {
         $this->e = new CreateElement('h' . $level);
         $this->e->addInnerText($text);
     }
-
-
-
 
 
 
@@ -36,16 +36,10 @@ class HeadingInnerTextWidget implements IGetElement
 
 
 
-
-
-
     public function getElement()
     {
         return $this->e->getElement();
     } 
-    
-
-
 
     
     

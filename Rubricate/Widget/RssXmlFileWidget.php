@@ -15,7 +15,10 @@ use Rubricate\Element\IGetElement;
 
 class RssXmlFileWidget implements IGetElement
 {
+
     private $e;
+
+
 
     public function __construct($file, $title = '')
     {
@@ -30,9 +33,6 @@ class RssXmlFileWidget implements IGetElement
         $this->e->setAttribute('href', $file);
     }
 
-    
-
-
 
 
     public function getElement()
@@ -40,6 +40,7 @@ class RssXmlFileWidget implements IGetElement
         return $this->e->getElement();
     } 
     
-}
 
+    
+}
 

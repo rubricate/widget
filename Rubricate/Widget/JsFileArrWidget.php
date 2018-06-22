@@ -15,6 +15,7 @@ use Rubricate\Element\IGetElement;
 
 class JsFileArrWidget implements IGetElement
 {
+
     private $e = array();
     
 
@@ -26,13 +27,10 @@ class JsFileArrWidget implements IGetElement
 
 
 
-
-
     public function getElement()
     {
         return implode('', $this->e);
     } 
-
 
 
 
@@ -44,10 +42,6 @@ class JsFileArrWidget implements IGetElement
             $this->e[] = $element->getElement();
         }
     } 
-    
-
-
-
 
 
 

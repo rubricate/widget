@@ -15,7 +15,10 @@ use Rubricate\Element\IGetElement;
 
 class CssFileWidget implements IGetElement
 {
+
     private $e;
+
+
 
     public function __construct($file)
     {
@@ -25,9 +28,6 @@ class CssFileWidget implements IGetElement
         $this->e->setAttribute('href', $file);
     }
 
-    
-
-
 
 
     public function getElement()
@@ -35,6 +35,7 @@ class CssFileWidget implements IGetElement
         return $this->e->getElement();
     } 
     
-}
 
+
+}
 

@@ -15,16 +15,16 @@ use Rubricate\Element\IGetElement;
 
 class ParagraphInnerTextWidget implements IGetElement
 {
+
     private $e;
+
+
     
     public function __construct($text)
     {
         $this->e = new CreateElement('p');
         $this->e->addInnerText($text);
     }
-
-
-
 
 
 
@@ -36,16 +36,10 @@ class ParagraphInnerTextWidget implements IGetElement
 
 
 
-
-
-
     public function getElement()
     {
         return $this->e->getElement();
     } 
-    
-
-
 
     
     

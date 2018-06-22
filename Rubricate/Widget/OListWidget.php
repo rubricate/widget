@@ -19,15 +19,10 @@ class OListWidget implements IGetElement
 
 
 
-
-
     public function __construct(array $listArr) 
     {
         $this->e = new RootChildWidget('ol', 'li', $listArr);
     }
-
-
-
 
 
 
@@ -38,18 +33,11 @@ class OListWidget implements IGetElement
 
 
 
-
-
-
     public function getElement()
     {
         return $this->e->getElement();
     } 
-
-
-
     
-
 
 
 }
