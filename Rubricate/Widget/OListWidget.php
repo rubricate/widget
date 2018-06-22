@@ -21,7 +21,7 @@ class OListWidget implements IGetElement
 
     public function __construct(array $listArr) 
     {
-        $this->e = new RootChildWidget('ol', 'li', $listArr);
+        $this->e = new ParentChildWidget('ol', 'li', $listArr);
     }
 
 

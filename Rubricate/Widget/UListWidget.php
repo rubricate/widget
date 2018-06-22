@@ -21,7 +21,7 @@ class UListWidget implements IGetElement
 
     public function __construct(array $listArr) 
     {
-        $this->e = new RootChildWidget('ul', 'li', $listArr);
+        $this->e = new ParentChildWidget('ul', 'li', $listArr);
     }
 
 

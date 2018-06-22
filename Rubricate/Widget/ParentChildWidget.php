@@ -4,7 +4,7 @@
  * @package     RubricatePHP
  * @author      Estefanio NS <estefanions AT gmail DOT com>
  * @link        https://github.com/rubricate/widget
- * @copyright   2017 
+ * @copyright   2017 - 2018
  * 
  */
 
@@ -13,7 +13,7 @@ namespace Rubricate\Widget;
 use Rubricate\Element\CreateElement;
 use Rubricate\Element\IGetElement;
 
-class RootChildWidget implements IGetElement
+class ParentChildWidget implements IGetElement
 {
 
     private $e;
@@ -23,7 +23,7 @@ class RootChildWidget implements IGetElement
     public function __construct(
         $parentTagname, $childTagname, array $contentArr
     ) {
-        $this->e = new ParentChildWidget(
+        self::init(
             $parentTagname, $childTagname, $contentArr
         );
     }
@@ -43,6 +43,22 @@ class RootChildWidget implements IGetElement
     } 
 
 
+
+    private function init($parentTagname, $childTagname, $contentArr)
+    {
+        $this->e = new CreateElement($parentTagname);
+
+        foreach ($contentArr as $content) {
+
+            $child = new CreateElement($childTagname);
+            $child->addInnerText($content);
+
+            $this->e->addInnerJoin($child);
+        }
+
+        return $this;
+    } 
+    
 
 }
 
