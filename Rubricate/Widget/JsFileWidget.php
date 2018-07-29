@@ -12,6 +12,7 @@ namespace Rubricate\Widget;
 
 use Rubricate\Element\CreateElement;
 use Rubricate\Element\IGetElement;
+use Rubricate\Element\StrElement;
 
 class JsFileWidget implements IGetElement
 {
@@ -25,7 +26,7 @@ class JsFileWidget implements IGetElement
         $this->e = new CreateElement('script');
         $this->e->setAttribute('type', 'text/javascript');
         $this->e->setAttribute('src',  $file);
-        $this->e->addInnerText('');
+        $this->e->addChild(new StrElement(''));
     }
 
 

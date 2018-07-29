@@ -12,6 +12,7 @@ namespace Rubricate\Widget;
 
 use Rubricate\Element\CreateElement;
 use Rubricate\Element\IGetElement;
+use Rubricate\Element\StrElement;
 
 class AnchorWidget implements IGetElement
 {
@@ -23,7 +24,7 @@ class AnchorWidget implements IGetElement
     {
         $this->e = new CreateElement('a');
         $this->e->setAttribute('href', $href);
-        $this->e->addInnerText($inner);
+        $this->e->addChild(new StrElement($inner));
     }
 
 

@@ -4,7 +4,7 @@
  * @package     RubricatePHP
  * @author      Estefanio NS <estefanions AT gmail DOT com>
  * @link        https://github.com/rubricate/widget
- * @copyright   2017 
+ * @copyright   2018 
  * 
  */
 
@@ -13,26 +13,19 @@ namespace Rubricate\Widget;
 use Rubricate\Element\CreateElement;
 use Rubricate\Element\IGetElement;
 
-class ParagraphInnerJoinWidget implements IGetElement
+class CanonicalWidget implements IGetElement
 {
 
     private $e;
 
-    
 
-    public function __construct(IGetElement $element)
+
+    public function __construct($url)
     {
-        $this->e = new CreateElement('p');
-        $this->e->addInnerJoin($element);
+        $this->e = new CreateElement('link');
+        $this->e->setAttribute('rel', 'canonical');
+        $this->e->setAttribute('href', $url);
     }
-
-
-
-    public function setAttribute($name, $value = null) 
-    { 
-        $this->e->setAttribute($name, $value);
-        return $this;
-    } 
 
 
 
@@ -40,8 +33,8 @@ class ParagraphInnerJoinWidget implements IGetElement
     {
         return $this->e->getElement();
     } 
-
     
+
     
 }
 

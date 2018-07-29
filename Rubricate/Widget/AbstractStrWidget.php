@@ -4,7 +4,7 @@
  * @package     RubricatePHP
  * @author      Estefanio NS <estefanions AT gmail DOT com>
  * @link        https://github.com/rubricate/widget
- * @copyright   2017 
+ * @copyright   2017 - 2018
  * 
  */
 
@@ -12,19 +12,23 @@ namespace Rubricate\Widget;
 
 use Rubricate\Element\CreateElement;
 use Rubricate\Element\IGetElement;
+use Rubricate\Element\StrElement;
 
-class ParagraphInnerTextWidget implements IGetElement
+class AbstractStrWidget implements IGetElement
 {
 
-    private $e;
+    private $e, $str;
+    protected $tagName;
 
 
     
+
     public function __construct($text)
     {
-        $this->e = new CreateElement('p');
-        $this->e->addInnerText($text);
+        $this->e   = new CreateElement($this->tagName);
+        $this->str = new StrElement($text);
     }
+
 
 
 
@@ -36,12 +40,23 @@ class ParagraphInnerTextWidget implements IGetElement
 
 
 
-    public function getElement()
+    public function setParam($arg)
     {
-        return $this->e->getElement();
+        $this->str->setParam($arg);
+
+        return $this;
     } 
 
+
+
+    public function getElement()
+    {
+        $this->e->addChild($this->str);
+
+        return $this->e->getElement();
+    } 
     
+
     
 }
 

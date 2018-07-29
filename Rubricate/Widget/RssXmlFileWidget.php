@@ -26,7 +26,7 @@ class RssXmlFileWidget implements IGetElement
         $this->e->setAttribute('rel', 'alternate');
         $this->e->setAttribute('type', 'application/rss+xml');
 
-        if($title) {
+        if(!empty($title)) {
             $this->e->setAttribute('title', $title);
         }
 
