@@ -2,17 +2,16 @@
 
 /*
  * @package     RubricatePHP
- * @author      Estefanio NS <estefanions AT gmail DOT com>
- * @link        https://github.com/rubricate/widget
- * @copyright   2017 
+ * @author      Estefanio N Santos <estefanions AT gmail DOT com>
+ * @link        https://github.com/rubricate/el
  * 
  */
 
-namespace Rubricate\Widget;
+namespace Rubricate\El;
 
 use Rubricate\Element\IGetElement;
 
-class RssXmlFileIfWidget implements IGetElement
+class RssXmlFileIfEl implements IGetElement
 {
 
     private $if;
@@ -23,7 +22,7 @@ class RssXmlFileIfWidget implements IGetElement
     public function __construct($if, $file, $title)
     {
         $this->if = $if;
-        $this->e = new RssXmlFileWidget($file, $title);
+        $this->e = new RssXmlFileEl($file, $title);
     }
 
 

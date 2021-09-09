@@ -2,17 +2,16 @@
 
 /*
  * @package     RubricatePHP
- * @author      Estefanio NS <estefanions AT gmail DOT com>
- * @link        https://github.com/rubricate/widget
- * @copyright   2017 
+ * @author      Estefanio N Santos <estefanions AT gmail DOT com>
+ * @link        https://github.com/rubricate/el
  * 
  */
 
-namespace Rubricate\Widget;
+namespace Rubricate\El;
 
 use Rubricate\Element\IGetElement;
 
-class CssFileArrWidget implements IGetElement
+class RssXmlFileArrEl implements IGetElement
 {
 
     private $e = array();
@@ -36,12 +35,12 @@ class CssFileArrWidget implements IGetElement
     private function init(array $file)
     {
         foreach ($file as $f) {
-
-            $element    = new CssFileWidget($f);
+            $element    = new RssXmlFileEl($f);
             $this->e[]  = $element->getElement();
         }
+        
     } 
-
+    
 
 
 }

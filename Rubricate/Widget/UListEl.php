@@ -2,17 +2,16 @@
 
 /*
  * @package     RubricatePHP
- * @author      Estefanio NS <estefanions AT gmail DOT com>
- * @link        https://github.com/rubricate/widget
- * @copyright   2017 
+ * @author      Estefanio N Santos <estefanions AT gmail DOT com>
+ * @link        https://github.com/rubricate/el
  * 
  */
 
-namespace Rubricate\Widget;
+namespace Rubricate\El;
 
 use Rubricate\Element\IGetElement;
 
-class OListWidget implements IGetElement
+class UListEl implements IGetElement
 {
 
     private $e;
@@ -21,7 +20,7 @@ class OListWidget implements IGetElement
 
     public function __construct(array $listArr) 
     {
-        $this->e = new ParentChildWidget('ol', 'li', $listArr);
+        $this->e = new ParentChildEl('ul', 'li', $listArr);
     }
 
 

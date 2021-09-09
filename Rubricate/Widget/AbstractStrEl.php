@@ -2,19 +2,18 @@
 
 /*
  * @package     RubricatePHP
- * @author      Estefanio NS <estefanions AT gmail DOT com>
- * @link        https://github.com/rubricate/widget
- * @copyright   2017 - 2018
+ * @author      Estefanio N Santos <estefanions AT gmail DOT com>
+ * @link        https://github.com/rubricate/el
  * 
  */
 
-namespace Rubricate\Widget;
+namespace Rubricate\El;
 
 use Rubricate\Element\CreateElement;
 use Rubricate\Element\IGetElement;
 use Rubricate\Element\StrElement;
 
-class AbstractStrWidget implements IGetElement
+class AbstractStrEl implements IGetElement
 {
 
     private $e, $str;

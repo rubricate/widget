@@ -1,8 +1,8 @@
 {
-    "name": "rubricate/widget",
+    "name": "rubricate/el",
     "authors": [
         {
-            "name"  : "Estefanio NS",
+            "name"  : "Estefanio N Santos",
             "email" : "estefanions@gmail.com"
         }
     ],
@@ -11,7 +11,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Rubricate\\Widget\\": "Rubricate/Widget/"
+            "Rubricate\\El\\": "Rubricate/El/"
         }
     }
 }

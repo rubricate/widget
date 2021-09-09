@@ -2,17 +2,16 @@
 
 /*
  * @package     RubricatePHP
- * @author      Estefanio NS <estefanions AT gmail DOT com>
- * @link        https://github.com/rubricate/widget
- * @copyright   2017 
+ * @author      Estefanio N Santos <estefanions AT gmail DOT com>
+ * @link        https://github.com/rubricate/el
  * 
  */
 
-namespace Rubricate\Widget;
+namespace Rubricate\El;
 
 use Rubricate\Element\IGetElement;
 
-class JsFileIfWidget implements IGetElement
+class JsFileIfEl implements IGetElement
 {
 
     private $if;
@@ -23,7 +22,7 @@ class JsFileIfWidget implements IGetElement
     public function __construct($if, $file)
     {
         $this->if = $if;
-        $this->e = new JsFileWidget($file);
+        $this->e = new JsFileEl($file);
     }
 
 
