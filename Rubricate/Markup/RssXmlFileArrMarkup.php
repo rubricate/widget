@@ -3,20 +3,19 @@
 /*
  * @package     RubricatePHP
  * @author      Estefanio N Santos <estefanions AT gmail DOT com>
- * @link        https://github.com/rubricate/el
+ * @link        https://github.com/rubricate/markup
  * 
  */
 
-namespace Rubricate\El;
+namespace Rubricate\Markup;
 
-use Rubricate\Element\CreateElement;
 use Rubricate\Element\IGetElement;
 
-class JsFileArrEl implements IGetElement
+class RssXmlFileArrMarkup implements IGetElement
 {
 
     private $e = array();
-    
+
 
 
     public function __construct(array $file)
@@ -35,13 +34,13 @@ class JsFileArrEl implements IGetElement
 
     private function init(array $file)
     {
-        foreach ($file as $f)
-        {
-            $element   = new JsFileEl($f);
-            $this->e[] = $element->getElement();
+        foreach ($file as $f) {
+            $element    = new RssXmlFileMarkup($f);
+            $this->e[]  = $element->getElement();
         }
+        
     } 
-
+    
 
 
 }

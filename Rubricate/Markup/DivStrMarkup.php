@@ -3,14 +3,14 @@
 /*
  * @package     RubricatePHP
  * @author      Estefanio N Santos <estefanions AT gmail DOT com>
- * @link        https://github.com/rubricate/el
+ * @link        https://github.com/rubricate/markup
  * 
  */
 
-namespace Rubricate\El;
+namespace Rubricate\Markup;
 
 
-class DivStrEl extends AbstractStrEl
+class DivStrMarkup extends AbstractStrMarkup
 {
     protected $tagName = 'div';
 }

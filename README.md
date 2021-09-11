@@ -1,9 +1,9 @@
-# Rubricate El[ement]
+# Rubricate Markup
 HTML, XHTML elements 
 
 ## Installation
 ```
-$ composer require rubricate/el
+$ composer require rubricate/markup
 ```
 
-- Documentation is at https://rubricate.github.io/components/el
+- Documentation is at https://rubricate.github.io/components/markup

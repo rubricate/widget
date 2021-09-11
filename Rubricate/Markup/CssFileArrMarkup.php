@@ -3,15 +3,15 @@
 /*
  * @package     RubricatePHP
  * @author      Estefanio N Santos <estefanions AT gmail DOT com>
- * @link        https://github.com/rubricate/el
+ * @link        https://github.com/rubricate/markup
  * 
  */
 
-namespace Rubricate\El;
+namespace Rubricate\Markup;
 
 use Rubricate\Element\IGetElement;
 
-class CssFileArrEl implements IGetElement
+class CssFileArrMarkup implements IGetElement
 {
 
     private $e = array();
@@ -36,7 +36,7 @@ class CssFileArrEl implements IGetElement
     {
         foreach ($file as $f) {
 
-            $element    = new CssFileEl($f);
+            $element    = new CssFileMarkup($f);
             $this->e[]  = $element->getElement();
         }
     } 

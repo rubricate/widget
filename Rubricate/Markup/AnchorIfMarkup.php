@@ -3,15 +3,15 @@
 /*
  * @package     RubricatePHP
  * @author      Estefanio N Santos <estefanions AT gmail DOT com>
- * @link        https://github.com/rubricate/el
+ * @link        https://github.com/rubricate/markup
  * 
  */
 
-namespace Rubricate\El;
+namespace Rubricate\Markup;
 
 use Rubricate\Element\IGetElement;
 
-class AnchorIfEl implements IGetElement
+class AnchorIfMarkup implements IGetElement
 {
 
     private $if;
@@ -21,7 +21,7 @@ class AnchorIfEl implements IGetElement
 
     public function __construct($if, $href, $inner)
     {
-        $this->e  = new AnchorEl($href, $inner);
+        $this->e  = new AnchorMarkup($href, $inner);
         $this->if = $if;
     }
 

@@ -1,5 +1,5 @@
 {
-    "name": "rubricate/el",
+    "name": "rubricate/markup",
     "authors": [
         {
             "name"  : "Estefanio N Santos",
@@ -11,7 +11,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Rubricate\\El\\": "Rubricate/El/"
+            "Rubricate\\Markup\\": "Rubricate/Markup/"
         }
     }
 }

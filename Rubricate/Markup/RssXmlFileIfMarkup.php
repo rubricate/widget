@@ -3,15 +3,15 @@
 /*
  * @package     RubricatePHP
  * @author      Estefanio N Santos <estefanions AT gmail DOT com>
- * @link        https://github.com/rubricate/el
+ * @link        https://github.com/rubricate/markup
  * 
  */
 
-namespace Rubricate\El;
+namespace Rubricate\Markup;
 
 use Rubricate\Element\IGetElement;
 
-class RssXmlFileIfEl implements IGetElement
+class RssXmlFileIfMarkup implements IGetElement
 {
 
     private $if;
@@ -22,7 +22,7 @@ class RssXmlFileIfEl implements IGetElement
     public function __construct($if, $file, $title)
     {
         $this->if = $if;
-        $this->e = new RssXmlFileEl($file, $title);
+        $this->e = new RssXmlFileMarkup($file, $title);
     }
 
 

@@ -3,15 +3,15 @@
 /*
  * @package     RubricatePHP
  * @author      Estefanio N Santos <estefanions AT gmail DOT com>
- * @link        https://github.com/rubricate/el
+ * @link        https://github.com/rubricate/markup
  * 
  */
 
-namespace Rubricate\El;
+namespace Rubricate\Markup;
 
 use Rubricate\Element\IGetElement;
 
-class OListEl implements IGetElement
+class OListMarkup implements IGetElement
 {
 
     private $e;
@@ -20,7 +20,7 @@ class OListEl implements IGetElement
 
     public function __construct(array $listArr) 
     {
-        $this->e = new ParentChildEl('ol', 'li', $listArr);
+        $this->e = new ParentChildMarkup('ol', 'li', $listArr);
     }
 
 

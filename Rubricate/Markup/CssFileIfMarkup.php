@@ -3,15 +3,15 @@
 /*
  * @package     RubricatePHP
  * @author      Estefanio N Santos <estefanions AT gmail DOT com>
- * @link        https://github.com/rubricate/el
+ * @link        https://github.com/rubricate/markup
  * 
  */
 
-namespace Rubricate\El;
+namespace Rubricate\Markup;
 
 use Rubricate\Element\IGetElement;
 
-class JsFileIfEl implements IGetElement
+class CssFileIfMarkup implements IGetElement
 {
 
     private $if;
@@ -22,7 +22,7 @@ class JsFileIfEl implements IGetElement
     public function __construct($if, $file)
     {
         $this->if = $if;
-        $this->e = new JsFileEl($file);
+        $this->e  = new CssFileMarkup($file);
     }
 
 

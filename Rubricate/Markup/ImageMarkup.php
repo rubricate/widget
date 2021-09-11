@@ -3,38 +3,38 @@
 /*
  * @package     RubricatePHP
  * @author      Estefanio N Santos <estefanions AT gmail DOT com>
- * @link        https://github.com/rubricate/el
+ * @link        https://github.com/rubricate/markup
  * 
  */
 
-namespace Rubricate\El;
+namespace Rubricate\Markup;
 
 use Rubricate\Element\CreateElement;
 use Rubricate\Element\IGetElement;
-use Rubricate\Element\StrElement;
 
-class AnchorEl implements IGetElement
+class ImageMarkup implements IGetElement
 {
+
     private $e;
+    private $file;
+    
 
 
-
-    public function __construct($href, $inner)
+    public function __construct(string $file, string $alt = '')
     {
-        $this->e = new CreateElement('a');
-        $this->e->setAttribute('href', $href);
-        $this->e->addChild(new StrElement($inner));
-    }
+        $this->e = new CreateElement('img');
+        $this->e->setAttribute('src', $file);
+        $this->e->setAttribute('alt', $alt);
+    }    
 
 
 
     public function setAttribute($name, $value = null) 
     { 
-        if($name == 'href') {
-            throw new \Exception(
-                ''
+        if(in_array($name, array('src', 'alt'))) {
+            throw new \Exception( ''
                 .'setting Attribute other than: '
-                .'href'
+                .'src and alt'
                 . PHP_EOL 
             );
         }
@@ -50,7 +50,7 @@ class AnchorEl implements IGetElement
         return $this->e->getElement();
     } 
 
-    
-    
+
+
 }
 

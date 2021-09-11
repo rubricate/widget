@@ -3,14 +3,14 @@
 /*
  * @package     RubricatePHP
  * @author      Estefanio N Santos <estefanions AT gmail DOT com>
- * @link        https://github.com/rubricate/el
+ * @link        https://github.com/rubricate/markup
  * 
  */
 
-namespace Rubricate\El;
+namespace Rubricate\Markup;
 
 
-class ParagraphStrEl extends AbstractStrEl
+class ParagraphStrMarkup extends AbstractStrMarkup
 {
     protected $tagName = 'p';
 }

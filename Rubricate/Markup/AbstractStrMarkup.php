@@ -3,17 +3,17 @@
 /*
  * @package     RubricatePHP
  * @author      Estefanio N Santos <estefanions AT gmail DOT com>
- * @link        https://github.com/rubricate/el
+ * @link        https://github.com/rubricate/markup
  * 
  */
 
-namespace Rubricate\El;
+namespace Rubricate\Markup;
 
 use Rubricate\Element\CreateElement;
 use Rubricate\Element\IGetElement;
 use Rubricate\Element\StrElement;
 
-class AbstractStrEl implements IGetElement
+class AbstractStrMarkup implements IGetElement
 {
 
     private $e, $str;

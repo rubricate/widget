@@ -3,14 +3,14 @@
 /*
  * @package     RubricatePHP
  * @author      Estefanio N Santos <estefanions AT gmail DOT com>
- * @link        https://github.com/rubricate/el
+ * @link        https://github.com/rubricate/markup
  * 
  */
 
-namespace Rubricate\El;
+namespace Rubricate\Markup;
 
 
-class HeadingStrEl extends AbstractStrEl
+class HeadingStrMarkup extends AbstractStrMarkup
 {
 
     public function __construct($text, $level = 1)
