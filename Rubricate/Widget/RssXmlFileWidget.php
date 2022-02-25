@@ -1,23 +1,13 @@
 <?php 
 
-/*
- * @package     RubricatePHP
- * @author      Estefanio N Santos <estefanions AT gmail DOT com>
- * @link        https://github.com/rubricate/markup
- * 
- */
-
-namespace Rubricate\Markup;
+namespace Rubricate\Widget;
 
 use Rubricate\Element\CreateElement;
 use Rubricate\Element\IGetElement;
 
-class RssXmlFileMarkup implements IGetElement
+class RssXmlFileWidget implements IGetElement
 {
-
     private $e;
-
-
 
     public function __construct($file, $title = '')
     {
@@ -32,14 +22,9 @@ class RssXmlFileMarkup implements IGetElement
         $this->e->setAttribute('href', $file);
     }
 
-
-
-    public function getElement()
+    public function getElement(): string
     {
         return $this->e->getElement();
     } 
-    
-
-    
 }
 

@@ -1,24 +1,14 @@
 <?php 
 
-/*
- * @package     RubricatePHP
- * @author      Estefanio N Santos <estefanions AT gmail DOT com>
- * @link        https://github.com/rubricate/markup
- * 
- */
-
-namespace Rubricate\Markup;
+namespace Rubricate\Widget;
 
 use Rubricate\Element\CreateElement;
 use Rubricate\Element\IGetElement;
 use Rubricate\Element\StrElement;
 
-class ParentChildMarkup implements IGetElement
+class ParentChildWidget implements IGetElement
 {
-
     private $e;
-
-
 
     public function __construct(
         $parentTagname, $childTagname, array $contentArr
@@ -28,23 +18,18 @@ class ParentChildMarkup implements IGetElement
         );
     }
 
-
-
-    public function setAttribute($name, $value = null)
+    public function setAttribute($key, $value = null): self
     {
-        $this->e->setAttribute($name, $value);
+        $this->e->setAttribute($key, $value);
+        return $this;
     } 
 
-
-
-    public function getElement()
+    public function getElement(): string
     {
         return $this->e->getElement();
     } 
 
-
-
-    private function init($parentTagname, $childTagname, $contentArr)
+    private function init($parentTagname, $childTagname, $contentArr): void
     {
         $this->e = new CreateElement($parentTagname);
 
@@ -55,10 +40,6 @@ class ParentChildMarkup implements IGetElement
 
             $this->e->addChild($child);
         }
-
-        return $this;
     } 
-    
-
 }
 

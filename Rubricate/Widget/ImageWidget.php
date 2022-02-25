@@ -1,24 +1,14 @@
 <?php 
 
-/*
- * @package     RubricatePHP
- * @author      Estefanio N Santos <estefanions AT gmail DOT com>
- * @link        https://github.com/rubricate/markup
- * 
- */
-
-namespace Rubricate\Markup;
+namespace Rubricate\Widget;
 
 use Rubricate\Element\CreateElement;
 use Rubricate\Element\IGetElement;
 
-class ImageMarkup implements IGetElement
+class ImageWidget implements IGetElement
 {
-
     private $e;
     private $file;
-    
-
 
     public function __construct(string $file, string $alt = '')
     {
@@ -27,11 +17,9 @@ class ImageMarkup implements IGetElement
         $this->e->setAttribute('alt', $alt);
     }    
 
-
-
-    public function setAttribute($name, $value = null) 
+    public function setAttribute($key, $value = null): self
     { 
-        if(in_array($name, array('src', 'alt'))) {
+        if(in_array($key, array('src', 'alt'))) {
             throw new \Exception( ''
                 .'setting Attribute other than: '
                 .'src and alt'
@@ -39,18 +27,13 @@ class ImageMarkup implements IGetElement
             );
         }
 
-        $this->e->setAttribute($name, $value);
+        $this->e->setAttribute($key, $value);
         return $this;
     } 
 
-
-
-    public function getElement()
+    public function getElement(): string
     {
         return $this->e->getElement();
     } 
-
-
-
 }
 

@@ -1,24 +1,14 @@
 <?php 
 
-/*
- * @package     RubricatePHP
- * @author      Estefanio N Santos <estefanions AT gmail DOT com>
- * @link        https://github.com/rubricate/markup
- * 
- */
-
-namespace Rubricate\Markup;
+namespace Rubricate\Widget;
 
 use Rubricate\Element\CreateElement;
 use Rubricate\Element\IGetElement;
 use Rubricate\Element\StrElement;
 
-class JsFileMarkup implements IGetElement
+class JsFileWidget implements IGetElement
 {
-
     private $e;
-
-
 
     public function __construct($file)
     {
@@ -28,14 +18,10 @@ class JsFileMarkup implements IGetElement
         $this->e->addChild(new StrElement(''));
     }
 
-
-
-    public function getElement()
+    public function getElement(): string
     {
         return $this->e->getElement();
     } 
-
-
 
 }
 

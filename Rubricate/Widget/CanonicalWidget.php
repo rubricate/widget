@@ -1,23 +1,13 @@
 <?php 
 
-/*
- * @package     RubricatePHP
- * @author      Estefanio N Santos <estefanions AT gmail DOT com>
- * @link        https://github.com/rubricate/markup
- * 
- */
-
-namespace Rubricate\Markup;
+namespace Rubricate\Widget;
 
 use Rubricate\Element\CreateElement;
 use Rubricate\Element\IGetElement;
 
-class CanonicalMarkup implements IGetElement
+class CanonicalWidget implements IGetElement
 {
-
     private $e;
-
-
 
     public function __construct($url)
     {
@@ -26,14 +16,9 @@ class CanonicalMarkup implements IGetElement
         $this->e->setAttribute('href', $url);
     }
 
-
-
-    public function getElement()
+    public function getElement(): string
     {
         return $this->e->getElement();
     } 
-    
-
-    
 }
 

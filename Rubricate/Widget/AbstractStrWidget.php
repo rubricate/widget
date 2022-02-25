@@ -1,26 +1,15 @@
 <?php 
 
-/*
- * @package     RubricatePHP
- * @author      Estefanio N Santos <estefanions AT gmail DOT com>
- * @link        https://github.com/rubricate/markup
- * 
- */
-
-namespace Rubricate\Markup;
+namespace Rubricate\Widget;
 
 use Rubricate\Element\CreateElement;
 use Rubricate\Element\IGetElement;
 use Rubricate\Element\StrElement;
 
-class AbstractStrMarkup implements IGetElement
+class AbstractStrWidget implements IGetElement
 {
-
     private $e, $str;
     protected $tagName;
-
-
-    
 
     public function __construct($text)
     {
@@ -28,34 +17,23 @@ class AbstractStrMarkup implements IGetElement
         $this->str = new StrElement($text);
     }
 
-
-
-
-    public function setAttribute($name, $value = null) 
+    public function setAttribute($key, $value = null): self
     { 
-        $this->e->setAttribute($name, $value);
+        $this->e->setAttribute($key, $value);
         return $this;
     } 
 
-
-
-    public function setParam($arg)
+    public function setParam($arg): self
     {
         $this->str->setParam($arg);
-
         return $this;
     } 
 
-
-
-    public function getElement()
+    public function getElement(): string
     {
         $this->e->addChild($this->str);
 
         return $this->e->getElement();
     } 
-    
-
-    
 }
 
