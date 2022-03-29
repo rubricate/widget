@@ -30,7 +30,7 @@ class AnchorWidget implements IGetElement
         return $this;
     } 
 
-    public function getElement(): self
+    public function getElement(): string
     {
         return $this->e->getElement();
     } 
