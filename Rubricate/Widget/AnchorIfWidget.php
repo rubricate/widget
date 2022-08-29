@@ -21,6 +21,13 @@ class AnchorIfWidget implements IGetElement
         return $this;
     } 
 
+    public function addChild(IGetElement $e): self
+    {
+        $this->e->addChild($e);
+
+        return $this;
+    } 
+
     public function getElement(): ?string
     {
         return (!$this->if)? null: $this->e->getElement();

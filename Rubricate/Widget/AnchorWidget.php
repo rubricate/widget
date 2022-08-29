@@ -10,7 +10,7 @@ class AnchorWidget implements IGetElement
 {
     private $e;
 
-    public function __construct($href, $text)
+    public function __construct($href, $text = '')
     {
         $this->e = new CreateElement('a');
         $this->e->setAttribute('href', $href);
@@ -21,12 +21,19 @@ class AnchorWidget implements IGetElement
     { 
         if($key == 'href') {
             throw new \Exception(''
-                .'The \'href\' attribute was used on the instance'
+                ."The 'href' attribute was used on the instance"
                 . PHP_EOL 
             );
         }
 
         $this->e->setAttribute($key, $value);
+        return $this;
+    } 
+
+    public function addChild(IGetElement $e): self
+    {
+        $this->e->addChild($e);
+
         return $this;
     } 
 
