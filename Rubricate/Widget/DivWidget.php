@@ -2,7 +2,7 @@
 
 namespace Rubricate\Widget;
 
-class DivStrWidget extends AbstractStrWidget
+class DivWidget extends AbstractStrWidget
 {
     protected $tagName = 'div';
 }
