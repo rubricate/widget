@@ -2,7 +2,7 @@
 
 namespace Rubricate\Widget;
 
-class ParagraphStrWidget extends AbstractStrWidget
+class ParagraphWidget extends AbstractStrWidget
 {
     protected $tagName = 'p';
 }
