@@ -16,7 +16,7 @@ class CanonicalWidget implements IGetElement
         $this->e->setAttribute('href', $url);
     }
 
-    public function getElement(): string
+    public function getElement()
     {
         return $this->e->getElement();
     } 

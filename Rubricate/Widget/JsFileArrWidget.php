@@ -14,12 +14,12 @@ class JsFileArrWidget implements IGetElement
         self::init($file);
     }
 
-    public function getElement(): string
+    public function getElement()
     {
         return implode('', $this->e);
     } 
 
-    private function init(array $file): void
+    private function init(array $file)
     {
         foreach ($file as $f)
         {

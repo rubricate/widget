@@ -17,7 +17,7 @@ class ImageWidget implements IGetElement
         $this->e->setAttribute('alt', $alt);
     }    
 
-    public function setAttribute($key, $value = null): self
+    public function setAttribute($key, $value = null)
     { 
         if(in_array($key, array('src', 'alt'))) {
             throw new \Exception( ''
@@ -31,7 +31,7 @@ class ImageWidget implements IGetElement
         return $this;
     } 
 
-    public function getElement(): string
+    public function getElement()
     {
         return $this->e->getElement();
     } 

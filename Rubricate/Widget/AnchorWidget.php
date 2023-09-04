@@ -17,7 +17,7 @@ class AnchorWidget implements IGetElement
         $this->e->addChild(new StrElement($text));
     }
 
-    public function setAttribute($key, $value = null): self
+    public function setAttribute($key, $value = null)
     { 
         if($key == 'href') {
             throw new \Exception(''
@@ -30,14 +30,14 @@ class AnchorWidget implements IGetElement
         return $this;
     } 
 
-    public function addChild(IGetElement $e): self
+    public function addChild(IGetElement $e)
     {
         $this->e->addChild($e);
 
         return $this;
     } 
 
-    public function getElement(): string
+    public function getElement()
     {
         return $this->e->getElement();
     } 

@@ -13,13 +13,13 @@ class OListWidget implements IGetElement
         $this->e = new ParentChildWidget('ol', 'li', $listArr);
     }
 
-    public function setAttribute($key, $value = null): self
+    public function setAttribute($key, $value = null)
     {
         $this->e->setAttribute($key, $value);
         return $this;
     } 
 
-    public function getElement(): string
+    public function getElement()
     {
         return $this->e->getElement();
     } 

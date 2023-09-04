@@ -15,7 +15,7 @@ class JsFileIfWidget implements IGetElement
         $this->e = new JsFileWidget($file);
     }
 
-    public function getElement(): ?string
+    public function getElement()
     {
         return (!$this->if)? null: $this->e->getElement();
     } 

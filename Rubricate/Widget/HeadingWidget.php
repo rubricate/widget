@@ -10,7 +10,7 @@ class HeadingWidget extends AbstractStrWidget
         parent::__construct($text);
     }
 
-    private function setLevel($level): void
+    private function setLevel($level)
     {
         if(!in_array($level, [1, 2, 3, 4, 5, 6])){
 

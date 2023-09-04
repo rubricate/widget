@@ -15,7 +15,7 @@ class RssXmlFileIfWidget implements IGetElement
         $this->e = new RssXmlFileWidget($file, $title);
     }
 
-    public function getElement(): void
+    public function getElement()
     {
         return (!$this->if)? null: $this->e->getElement();
     } 

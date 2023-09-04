@@ -9,13 +9,13 @@ class CssFileIfWidget implements IGetElement
     private $if;
     private $e;
 
-    public function __construct($if, $file): void
+    public function __construct($if, $file)
     {
         $this->if = $if;
         $this->e  = new CssFileWidget($file);
     }
 
-    public function getElement(): ?string
+    public function getElement()
     {
         return (!$this->if)? null: $this->e->getElement();
     } 

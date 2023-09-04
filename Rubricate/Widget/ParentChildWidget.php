@@ -18,18 +18,18 @@ class ParentChildWidget implements IGetElement
         );
     }
 
-    public function setAttribute($key, $value = null): self
+    public function setAttribute($key, $value = null)
     {
         $this->e->setAttribute($key, $value);
         return $this;
     } 
 
-    public function getElement(): string
+    public function getElement()
     {
         return $this->e->getElement();
     } 
 
-    private function init($parentTagname, $childTagname, $contentArr): void
+    private function init($parentTagname, $childTagname, $contentArr)
     {
         $this->e = new CreateElement($parentTagname);
 

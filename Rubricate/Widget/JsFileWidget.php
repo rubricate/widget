@@ -18,7 +18,7 @@ class JsFileWidget implements IGetElement
         $this->e->addChild(new StrElement(''));
     }
 
-    public function getElement(): string
+    public function getElement()
     {
         return $this->e->getElement();
     } 

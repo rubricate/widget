@@ -13,12 +13,12 @@ class UListWidget implements IGetElement
         $this->e = new ParentChildWidget('ul', 'li', $listArr);
     }
 
-    public function setAttribute($key, $value = null): void
+    public function setAttribute($key, $value = null)
     {
         $this->e->setAttribute($key, $value);
     } 
 
-    public function getElement(): string
+    public function getElement()
     {
         return $this->e->getElement();
     } 

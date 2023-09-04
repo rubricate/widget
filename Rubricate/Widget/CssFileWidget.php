@@ -17,7 +17,7 @@ class CssFileWidget implements IGetElement
         $this->e->setAttribute('href', $file);
     }
 
-    public function getElement(): string
+    public function getElement()
     {
         return $this->e->getElement();
     } 

@@ -11,25 +11,25 @@ class AbstractStrWidget implements IGetElement
     private $e, $str;
     protected $tagName;
 
-    public function __construct($text)
+    public function __construct($text = '')
     {
         $this->e   = new CreateElement($this->tagName);
         $this->str = new StrElement($text);
     }
 
-    public function setAttribute($key, $value = null): self
+    public function setAttribute($key, $value = null)
     { 
         $this->e->setAttribute($key, $value);
         return $this;
     } 
 
-    public function setParam($arg): self
+    public function setParam($arg)
     {
         $this->str->setParam($arg);
         return $this;
     } 
 
-    public function getElement(): string
+    public function getElement()
     {
         $this->e->addChild($this->str);
 

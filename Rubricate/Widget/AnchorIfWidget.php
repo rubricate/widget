@@ -15,20 +15,20 @@ class AnchorIfWidget implements IGetElement
         $this->if = $if;
     }
 
-    public function setAttribute($key, $value = null): self
+    public function setAttribute($key, $value = null)
     { 
         $this->e->setAttribute($key, $value);
         return $this;
     } 
 
-    public function addChild(IGetElement $e): self
+    public function addChild(IGetElement $e)
     {
         $this->e->addChild($e);
 
         return $this;
     } 
 
-    public function getElement(): ?string
+    public function getElement()
     {
         return (!$this->if)? null: $this->e->getElement();
     } 
