@@ -1,6 +1,7 @@
 {
     "name": "rubricate/widget",
     "description": "component to render an HTML",
+    "license": "MIT",
     "authors": [
         {
             "name"  : "Estefanio N Santos",
