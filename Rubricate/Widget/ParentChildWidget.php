@@ -1,5 +1,7 @@
 <?php 
 
+declare(strict_types=1);
+
 namespace Rubricate\Widget;
 
 use Rubricate\Element\CreateElement;
@@ -18,18 +20,18 @@ class ParentChildWidget implements IGetElement
         );
     }
 
-    public function setAttribute($key, $value = null)
+    public function setAttribute($key, $value = null): object
     {
         $this->e->setAttribute($key, $value);
         return $this;
     } 
 
-    public function getElement()
+    public function getElement(): string
     {
         return $this->e->getElement();
     } 
 
-    private function init($parentTagname, $childTagname, $contentArr)
+    private function init($parentTagname, $childTagname, $contentArr): void
     {
         $this->e = new CreateElement($parentTagname);
 

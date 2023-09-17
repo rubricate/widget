@@ -1,5 +1,7 @@
 <?php 
 
+declare(strict_types=1);
+
 namespace Rubricate\Widget;
 
 use Rubricate\Element\CreateElement;
@@ -18,7 +20,7 @@ class JsFileWidget implements IGetElement
         $this->e->addChild(new StrElement(''));
     }
 
-    public function getElement()
+    public function getElement(): string
     {
         return $this->e->getElement();
     } 

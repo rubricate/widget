@@ -1,5 +1,7 @@
 <?php 
 
+declare(strict_types=1);
+
 namespace Rubricate\Widget;
 
 use Rubricate\Element\CreateElement;
@@ -22,7 +24,7 @@ class RssXmlFileWidget implements IGetElement
         $this->e->setAttribute('href', $file);
     }
 
-    public function getElement()
+    public function getElement(): string
     {
         return $this->e->getElement();
     } 

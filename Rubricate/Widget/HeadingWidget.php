@@ -1,5 +1,7 @@
 <?php 
 
+declare(strict_types=1);
+
 namespace Rubricate\Widget;
 
 class HeadingWidget extends AbstractStrWidget
@@ -10,7 +12,7 @@ class HeadingWidget extends AbstractStrWidget
         parent::__construct($text);
     }
 
-    private function setLevel($level)
+    private function setLevel($level): string
     {
         if(!in_array($level, [1, 2, 3, 4, 5, 6])){
 

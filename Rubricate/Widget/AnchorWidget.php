@@ -1,5 +1,7 @@
 <?php 
 
+declare(strict_types=1);
+
 namespace Rubricate\Widget;
 
 use Rubricate\Element\CreateElement;
@@ -17,7 +19,7 @@ class AnchorWidget implements IGetElement
         $this->e->addChild(new StrElement($text));
     }
 
-    public function setAttribute($key, $value = null)
+    public function setAttribute($key, $value = null): object
     { 
         if($key == 'href') {
             throw new \Exception(''
@@ -30,14 +32,14 @@ class AnchorWidget implements IGetElement
         return $this;
     } 
 
-    public function addChild(IGetElement $e)
+    public function addChild(IGetElement $e): object
     {
         $this->e->addChild($e);
 
         return $this;
     } 
 
-    public function getElement()
+    public function getElement(): string
     {
         return $this->e->getElement();
     } 

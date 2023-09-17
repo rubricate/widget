@@ -1,5 +1,7 @@
 <?php 
 
+declare(strict_types=1);
+
 namespace Rubricate\Widget;
 
 use Rubricate\Element\CreateElement;
@@ -17,7 +19,7 @@ class ImageWidget implements IGetElement
         $this->e->setAttribute('alt', $alt);
     }    
 
-    public function setAttribute($key, $value = null)
+    public function setAttribute($key, $value = null): object
     { 
         if(in_array($key, array('src', 'alt'))) {
             throw new \Exception( ''
@@ -31,7 +33,7 @@ class ImageWidget implements IGetElement
         return $this;
     } 
 
-    public function getElement()
+    public function getElement(): string
     {
         return $this->e->getElement();
     } 

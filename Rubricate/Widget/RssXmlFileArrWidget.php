@@ -1,5 +1,7 @@
 <?php 
 
+declare(strict_types=1);
+
 namespace Rubricate\Widget;
 
 use Rubricate\Element\IGetElement;
@@ -13,12 +15,12 @@ class RssXmlFileArrWidget implements IGetElement
         self::init($file);
     }
 
-    public function getElement()
+    public function getElement(): string
     {
         return implode('', $this->e);
     } 
 
-    private function init(array $file)
+    private function init(array $file): void
     {
         foreach ($file as $f) {
             $element    = new RssXmlFileWidget($f);

@@ -1,5 +1,7 @@
 <?php 
 
+declare(strict_types=1);
+
 namespace Rubricate\Widget;
 
 use Rubricate\Element\IGetElement;
@@ -13,7 +15,7 @@ class CssFileArrWidget implements IGetElement
         self::init($file);
     }
 
-    public function getElement()
+    public function getElement(): string
     {
         return implode('', $this->e);
     } 
