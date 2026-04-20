@@ -1,24 +1,44 @@
 {
     "name": "rubricate/widget",
-    "description": "component to render an HTML",
+    "description": "Powerful and reusable HTML components for PHP applications.",
     "license": "MIT",
+    "type": "library",
+    "keywords": [
+        "rubricate",
+        "widget",
+        "html",
+        "renderer",
+        "components",
+        "clean-architecture",
+        "php82"
+    ],
     "authors": [
         {
-            "name"  : "Estefanio N Santos",
-            "email" : "estefanions@gmail.com"
+            "name": "Estefanio N Santos",
+            "email": "estefanions@gmail.com",
+            "role": "Developer"
         }
     ],
     "require": {
-        "php": ">=7.2",
-        "rubricate/element": "^2.2"
+        "php": ">=8.2",
+        "rubricate/element": "^3.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^10.0",
+        "phpstan/phpstan": "^1.10"
     },
     "support": {
-        "docs"   : "https://rubricate.github.io/components/widget",
-        "source" : "https://github.com/rubricate/widget"
+        "docs": "https://rubricate.github.io/components/widget",
+        "source": "https://github.com/rubricate/widget",
+        "issues": "https://github.com/rubricate/widget/issues"
     },
     "autoload": {
         "psr-4": {
             "Rubricate\\Widget\\": "Rubricate/Widget/"
         }
+    },
+    "config": {
+        "sort-packages": true,
+        "optimize-autoloader": true
     }
 }
