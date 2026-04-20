@@ -4,26 +4,23 @@ declare(strict_types=1);
 
 namespace Rubricate\Widget;
 
+use Exception;
+
 class HeadingWidget extends AbstractStrWidget
 {
-    public function __construct($text, $level = 1)
+    public function __construct(mixed $text = null, int $level = 1)
     {
-        self::setLevel($level);
-        parent::__construct($text);
+        parent::__construct($this->resolveLevel($level), $text);
     }
 
-    private function setLevel($level): string
+    private function resolveLevel(int $level): string
     {
-        if(!in_array($level, [1, 2, 3, 4, 5, 6])){
-
-            throw new \Exception(PHP_EOL 
-                . '"Second Invalid Argument: '
-                . 'use 1, 2, 3, 4, 5 or 6"'
-                . PHP_EOL
+        if (!in_array($level, [1, 2, 3, 4, 5, 6], true)) {
+            throw new Exception(
+                sprintf('Invalid heading level: %d. Use 1, 2, 3, 4, 5 or 6.', $level)
             );
         }
 
-        $this->tagName = 'h' . $level;    
-    } 
+        return 'h' . $level;
+    }
 }
-
