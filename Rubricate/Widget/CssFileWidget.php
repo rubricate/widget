@@ -9,9 +9,9 @@ use Rubricate\Element\IGetElement;
 
 class CssFileWidget implements IGetElement
 {
-    private $e;
+    private readonly CreateElement $e;
 
-    public function __construct($file)
+    public function __construct(string $file)
     {
         $this->e = new CreateElement('link');
         $this->e->setAttribute('rel', 'stylesheet');
@@ -23,6 +23,5 @@ class CssFileWidget implements IGetElement
     {
         return $this->e->getElement();
     } 
-
 }
 
