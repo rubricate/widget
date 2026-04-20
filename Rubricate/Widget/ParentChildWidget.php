@@ -10,19 +10,26 @@ use Rubricate\Element\StrElement;
 
 class ParentChildWidget implements IGetElement
 {
-    private $e;
+    private readonly CreateElement $e;
 
     public function __construct(
-        $parentTagname, $childTagname, array $contentArr
+        string $parentTagname, 
+        string $childTagname, 
+        array $contentArr
     ) {
-        self::init(
-            $parentTagname, $childTagname, $contentArr
-        );
+        $this->e = new CreateElement($parentTagname);
+
+        foreach ($contentArr as $content) {
+            $child = new CreateElement($childTagname);
+            $child->addChild(new StrElement($content));
+
+            $this->e->addChild($child);
+        }
     }
 
-    public function setAttribute($key, $value = null): object
+    public function setAttribute(string $name, mixed $value = null): self
     {
-        $this->e->setAttribute($key, $value);
+        $this->e->setAttribute($name, $value);
         return $this;
     } 
 
@@ -30,18 +37,4 @@ class ParentChildWidget implements IGetElement
     {
         return $this->e->getElement();
     } 
-
-    private function init($parentTagname, $childTagname, $contentArr): void
-    {
-        $this->e = new CreateElement($parentTagname);
-
-        foreach ($contentArr as $content) {
-
-            $child = new CreateElement($childTagname);
-            $child->addChild(new StrElement($content));
-
-            $this->e->addChild($child);
-        }
-    } 
 }
-

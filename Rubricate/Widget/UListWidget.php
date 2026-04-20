@@ -8,16 +8,16 @@ use Rubricate\Element\IGetElement;
 
 class UListWidget implements IGetElement
 {
-    private $e;
+    private readonly ParentChildWidget $e;
 
     public function __construct(array $listArr) 
     {
         $this->e = new ParentChildWidget('ul', 'li', $listArr);
     }
 
-    public function setAttribute($key, $value = null): object
+    public function setAttribute(string $name, mixed $value = null): self
     {
-        $this->e->setAttribute($key, $value);
+        $this->e->setAttribute($name, $value);
         return $this;
     } 
 
@@ -26,4 +26,3 @@ class UListWidget implements IGetElement
         return $this->e->getElement();
     } 
 }
-
