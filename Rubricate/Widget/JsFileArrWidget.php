@@ -4,30 +4,22 @@ declare(strict_types=1);
 
 namespace Rubricate\Widget;
 
-use Rubricate\Element\CreateElement;
 use Rubricate\Element\IGetElement;
 
 class JsFileArrWidget implements IGetElement
 {
-    private $e = array();
+    private array $e = [];
 
-    public function __construct(array $file)
+    public function __construct(array $files)
     {
-        self::init($file);
+        foreach ($files as $file) {
+            $this->e[] = (new JsFileWidget($file))->getElement();
+        }
     }
 
     public function getElement(): string
     {
         return implode('', $this->e);
-    } 
-
-    private function init(array $file): void
-    {
-        foreach ($file as $f)
-        {
-            $element   = new JsFileWidget($f);
-            $this->e[] = $element->getElement();
-        }
     } 
 }
 
