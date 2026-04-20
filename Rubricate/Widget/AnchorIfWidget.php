@@ -8,32 +8,32 @@ use Rubricate\Element\IGetElement;
 
 class AnchorIfWidget implements IGetElement
 {
-    private $if;
-    private $e;
+    private readonly AnchorWidget $e;
+    private readonly bool $condition;
 
-    public function __construct($if, $href, $text)
+    public function __construct(mixed $if, string $href, mixed $text = null)
     {
-        $this->e  = new AnchorWidget($href, $text);
-        $this->if = $if;
+        $this->e = new AnchorWidget($href, $text);
+        
+        $this->condition = is_callable($if) 
+            ? (bool) $if() 
+            : (bool) $if;
     }
 
-    public function setAttribute($key, $value = null): object
+    public function setAttribute(string $name, mixed $value = null): self
     { 
-        $this->e->setAttribute($key, $value);
+        $this->e->setAttribute($name, $value);
         return $this;
     } 
 
-    public function addChild(IGetElement $e): object
+    public function addChild(IGetElement $e): self
     {
         $this->e->addChild($e);
-
         return $this;
     } 
 
     public function getElement(): ?string
     {
-        return (!$this->if)? null: $this->e->getElement();
+        return $this->condition ? $this->e->getElement() : null;
     } 
-
 }
-
