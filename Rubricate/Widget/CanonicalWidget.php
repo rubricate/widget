@@ -9,9 +9,9 @@ use Rubricate\Element\IGetElement;
 
 class CanonicalWidget implements IGetElement
 {
-    private $e;
+    private readonly CreateElement $e;
 
-    public function __construct($url)
+    public function __construct(string $url)
     {
         $this->e = new CreateElement('link');
         $this->e->setAttribute('rel', 'canonical');
