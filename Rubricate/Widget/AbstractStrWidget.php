@@ -8,26 +8,28 @@ use Rubricate\Element\CreateElement;
 use Rubricate\Element\IGetElement;
 use Rubricate\Element\StrElement;
 
-class AbstractStrWidget implements IGetElement
+abstract class AbstractStrWidget implements IGetElement
 {
-    private $e, $str;
-    protected $tagName;
+    private readonly CreateElement $e;
+    private readonly StrElement $str;
 
-    public function __construct($text = '')
-    {
+    public function __construct(
+        protected readonly string $tagName,
+        mixed $text = null
+    ) {
         $this->e   = new CreateElement($this->tagName);
         $this->str = new StrElement($text);
     }
 
-    public function setAttribute($key, $value = null): object
+    public function setAttribute(string $name, mixed $value = null): self
     { 
-        $this->e->setAttribute($key, $value);
+        $this->e->setAttribute($name, $value);
         return $this;
     } 
 
-    public function setParam($arg): object
+    public function add(mixed $value): self
     {
-        $this->str->setParam($arg);
+        $this->str->add($value);
         return $this;
     } 
 
@@ -38,4 +40,3 @@ class AbstractStrWidget implements IGetElement
         return $this->e->getElement();
     } 
 }
-
