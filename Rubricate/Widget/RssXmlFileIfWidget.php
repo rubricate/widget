@@ -8,18 +8,18 @@ use Rubricate\Element\IGetElement;
 
 class RssXmlFileIfWidget implements IGetElement
 {
-    private $if;
-    private $e;
+    private readonly RssXmlFileWidget $e;
+    private readonly bool $condition;
 
-    public function __construct($if, $file, $title)
+    public function __construct(mixed $if, string $file, string $title = '')
     {
-        $this->if = $if;
         $this->e = new RssXmlFileWidget($file, $title);
+        $this->condition = is_callable($if) ? (bool) $if() : (bool) $if;
     }
 
     public function getElement(): ?string
     {
-        return (!$this->if)? null: $this->e->getElement();
+        return $this->condition ? $this->e->getElement() : null;
     } 
 }
 

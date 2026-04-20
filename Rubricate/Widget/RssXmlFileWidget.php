@@ -9,15 +9,15 @@ use Rubricate\Element\IGetElement;
 
 class RssXmlFileWidget implements IGetElement
 {
-    private $e;
+    private readonly CreateElement $e;
 
-    public function __construct($file, $title = '')
+    public function __construct(string $file, string $title = '')
     {
         $this->e = new CreateElement('link');
         $this->e->setAttribute('rel', 'alternate');
         $this->e->setAttribute('type', 'application/rss+xml');
 
-        if(!empty($title)) {
+        if ($title !== '') {
             $this->e->setAttribute('title', $title);
         }
 

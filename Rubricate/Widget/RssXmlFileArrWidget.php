@@ -8,25 +8,18 @@ use Rubricate\Element\IGetElement;
 
 class RssXmlFileArrWidget implements IGetElement
 {
-    private $e = array();
+    private array $e = [];
 
-    public function __construct(array $file)
+    public function __construct(array $files)
     {
-        self::init($file);
+        foreach ($files as $file) {
+            $this->e[] = (new RssXmlFileWidget($file))->getElement();
+        }
     }
 
     public function getElement(): string
     {
         return implode('', $this->e);
-    } 
-
-    private function init(array $file): void
-    {
-        foreach ($file as $f) {
-            $element    = new RssXmlFileWidget($f);
-            $this->e[]  = $element->getElement();
-        }
-        
     } 
 }
 
